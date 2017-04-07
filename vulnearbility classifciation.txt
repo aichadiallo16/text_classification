@@ -1,0 +1,54 @@
+﻿Vulnerability classification
+
+http://ebiquity.umbc.edu/_file_directory_/papers/680.pdf
+
+Module d’entrainement
+
+Annotation des données
+	Entrainement du classeur CRF
+		Selection des features
+
+
+
+
+
+
+1 _ d’ou viennent les donnees
+
+les donnees sont issues de Pelican
+
+2_ Pre traitement des données
+
+On identifie les classes qui indique que le contenu que on est en train d’analyser contient bien des “mots” de type cyber sécurité
+Logiciel
+OS
+termes liés aux réseau: SSL, IP, HTTP
+Attaques:
+Moyens → reaction du système à l’entrée ex BOF
+Consequences → resultat final de l’attaque
+noms de fichiers ex index.php
+hardware
+autres termes techniques
+NER modifier : ex “Adobe et toutes le versions precedentes”. En general il suit le terme de la classe software ou de la sous-classe OS.
+
+3_ Annotation
+
+GATE → https://gate.ac.uk/
+Trop long. 
+Ou prendre les data pour l’entrainement?
+
+3_bis Lemma + Stemming 
+
+Stemming → reduction du mot a leur racine + lemmatization → regroupe les differents declinaisons des mots 
+nltk 
+
+4_Conditional Random Fields
+
+C’est un classeur qui prend en compte le contexte pour effectuer la classification, cad qu’il tient compte des elmenets voisisns 
+utilisé pour predire les sequences d’etiquettes pour differentes sequences d’input
+Pystruct
+5_features 
+les features sont les proprietes qui permettent de construire le modèle. La collection de features sont une combinaison de feautures qui est utilisée our entrainer le modèle de manière a identifier les propriétés du texte qui le characterisent.
+Le modèle s’appuie sur ces features et c’est donc très important de bien les choisir
+elles seront données par Stanford NER ou Pystruct (depend de l’outil choisi)
+ 
